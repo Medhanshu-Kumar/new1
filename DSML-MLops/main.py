@@ -47,4 +47,18 @@ arr = [38, 27, 43, 3, 9, 82, 10]
 sorted_arr = merge_sort(arr)
 print(sorted_arr)  # Output: [3, 9, 10, 27, 38, 43, 82]
 
+# add insert_sort logo
+def insertion_sort(arr):
+    for i in range(1, len(arr)):
+        key = arr[i]
+        j = i - 1
+        while j >= 0 and arr[j] > key:
+            arr[j + 1] = arr[j]
+            j -= 1
+        arr[j + 1] = key
+
+arr = [5, 3, 8, 6, 2]
+insertion_sort(arr)
+print("Sorted Array:", arr)
+
 
